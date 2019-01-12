@@ -1,0 +1,80 @@
+.list-group-item {
+  line-height: 1.5;
+}
+
+.img-fluid {
+  max-height: 300px;
+  width: auto;
+}
+
+#table-image {
+  max-height: 50px;
+  width: auto;
+}
+
+table {
+  margin: 10px;
+}
+th, td {
+  padding: 5px;
+  border: 1px solid #999;
+}
+th {
+  background: #ccc;
+}
+tr:nth-child(odd) {
+  background: #eee;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 12% auto; 
+  padding: 20px;
+  text-align: center;
+  border: 4px solid black;
+  width: 35%; 
+}
+
+.container {
+  margin-top: 2%;
+}
+
+button {
+  background-color: #eee;
+  border: 2px solid gray;
+  border-radius: 5px;
+}
+
+a {
+  color: black;
+}
+#comment-submit {
+  background-color:rgb(110, 206, 144);
+}
+
+.list-group-item {
+  background-color:#d8e7e1;
+}
+
+h1 {
+  background-color: #d8e7e1;
+}
+
+#user-name {
+  max-width: 80%;
+  padding:2%; 
+  background-color: #d8e7e1;
+}

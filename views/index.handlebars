@@ -1,0 +1,35 @@
+<div id="home" style="margin-top: 0%;">
+  <div class="container" style="background-image: url(/images/dinobackground.jpg); background-size: 100% auto; background-size: cover;">
+    <div class="row" style="text-align:-webkit-center;">
+      <div class="col-12" style="margin-top:1%;">
+        <h1 style="max-width:30%; padding-top:2%; padding-bottom:2%;">Toy Niche</h1>
+      </div>
+    </div>
+    <div class="row" style="text-align:-webkit-center;">
+      <div class="col-6" style="padding-top:5%;">
+        <h2 id="user-name">{{msg}} </h2>
+        <br>
+              <div class="dropdown show">
+                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  What do you want to do today?
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                  <a class="dropdown-item" href="/toys">Share a toy</a>
+                  <a class="dropdown-item" href="/search">Search Toys</a>
+                  <a class="dropdown-item" href="/login">Sign In</a>
+                  <a class="dropdown-item" href="/members">Logout</a>
+                  <a class="dropdown-item" href="/signup">Sign up to be a Niche User</a>
+                </div>
+              </div>
+      </div>
+      {{!-- //Grabbr widget for news feed --}}
+        <div class="col-6" style="padding-top:5%;">
+          <div class="feedgrabbr_widget" id="fgid_04b18262724493d4c685f762b"></div>
+            <script>if (typeof (fg_widgets) === "undefined") fg_widgets = new Array(); fg_widgets.push("fgid_04b18262724493d4c685f762b");</script>
+            <script async src="https://www.feedgrabbr.com/widget/fgwidget.js"></script>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<script src="/js/index.js"></script>

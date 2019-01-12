@@ -1,0 +1,49 @@
+<div class="container" style="background-color: hsla(60, 96%, 82%, 0.993)">
+<div class="row" style="text-align:center">
+    <div class="col-5">
+        <h3>Search Niche for User Toys</h3>
+        <div id="table"></div>
+    </div>
+    <div class="col-2" style="padding-top:2%;">
+        <button><a href="/" style="float:right">Home/Niche</a></button>
+    </div>
+    <div class="col-5">
+        {{!-- //Google Custom Search Engine --}}
+        <h3>Search for a toy on popular sites</h3>
+            <div id="search-engine">
+                <script>
+                    (function() {
+                        var cx = '011747636867363353356:djflbosipqw';
+                        var gcse = document.createElement('script');
+                        gcse.type = 'text/javascript';
+                        gcse.async = true;
+                        gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
+                        var s = document.getElementsByTagName('script')[0];
+                        s.parentNode.insertBefore(gcse, s);
+                    })();
+                </script>
+                <gcse:search></gcse:search>
+            </div>
+    </div>
+</div>
+</div>
+{{!-- //Handlebars table template --}}
+    <script id="database-template" type="text/x-handlebars-template">
+            <table>
+                <thead> 
+                    <th>Name</th> 
+                    <th>Image</th> 
+                    <th>Description</th> 
+                </thead> 
+                    <tbody> 
+                        {{#each toys}} 
+                            <tr> 
+                                <td><a href="toys/{{this.id}}">{{this.text}}</a></td> 
+                                <td><img src={{this.photoPath}} class="img-fluid" id="table-image" alt="toy"></td>
+                                <td>{{this.description}}</td> 
+                            </tr> 
+                        {{/each}} 
+                    </tbody> 
+                </table> 
+            </script>
+<script src="/js/search.js"></script>
