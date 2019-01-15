@@ -1,7 +1,7 @@
 {
-  "name": "My Hobby Corner",
+  "name": "My-Hobby-Corner",
   "version": "1.0.0",
-  "description": "Project 2 Starter",
+  "description": "fixing styling, etc.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js"

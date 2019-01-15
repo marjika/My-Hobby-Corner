@@ -70,11 +70,36 @@ a {
 }
 
 h1 {
-  background-color: #d8e7e1;
+  background-color: transparent;
+  font-size: 50px;
+  color: #fefefe;
+  font-family: 'Acme', sans-serif;
 }
 
 #user-name {
   max-width: 80%;
   padding:2%; 
-  background-color: #d8e7e1;
+  background-color: transparent;
+  font-size: 30px;
+  color: #fefefe;
+  font-family: 'Acme', sans-serif;
+}
+
+.dropdown-menu {
+  background-color: transparent;
+  color: #fefefe;
+  font-family: 'Acme', sans-serif;
+}
+
+.dropdown-item {
+  color: #fefefe;
+}
+
+.dropdown-item:hover {
+  background-color: rgba(128,128,128,.5);
+  color: #fefefe;
+}
+
+.feedgrabbr_widget {
+  background-color: transparent;
 }
