@@ -88,6 +88,7 @@ var handleFormSubmit = function(event) {
     description: $exampleDescription.val().trim(),
     photoPath: picPath
   };
+  //console.log(picPath);
 
   if (!(toy.text && toy.description)) {
     alert("You must enter a toy text and description!");
@@ -147,11 +148,32 @@ $(document).on("click", "#comment-submit", function(event) {
 $submitBtn.on("click", handleFormSubmit);
 $exampleList.on("click", ".delete", handleDeleteBtnClick);
 
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'dbs2wbyop', 
+  uploadPreset: 'qhyp62og',
+  folder: 'user_photos',
+  multiple: false}, function(error, result) { 
+    if (error) {
+      console.log(error);
+    }
+    //picPath = result[0].url;
+    if (result && result.event === "success") {
+      picPath = result.info.url;
+    }
+     })
+
   document.getElementById("upload_widget_opener").addEventListener("click", function() {
-    cloudinary.openUploadWidget({ cloud_name: 'dbs2wbyop', upload_preset: 'qhyp62og', folder: 'user_photos'}, 
-    function(error, result) { 
-        picPath = result[0].url;
-        console.log(error, result) });
+    myWidget.open();
   }, false);
 
   refreshExamples();
+
+{/* <script type="text/javascript">  
+var myWidget = cloudinary.createUploadWidget({
+  cloudName: 'my_cloud_name', 
+  uploadPreset: 'my_preset'}, (error, result) => { console.log(error, result) })
+
+document.getElementById("upload_widget").addEventListener("click", function(){
+    myWidget.open();
+  }, false);
+</script> */}

@@ -2,7 +2,7 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-8">
+      <div class="col-6">
         <h2>Talk about your toy!</h2>
         <h3>→First, click below to upload an image of your toy←</h3>
         <button style="background-color:#5ddfc9"><a href="#" id="upload_widget_opener">Upload your toy image</a></button>
@@ -25,26 +25,26 @@
             {{#each data.toys}}
             <li data-id="{{this.id}}" class="list-group-item">
               <a href="toys/{{this.id}}">{{this.text}}</a>
-              <button class="btn btn-danger float-right delete">ｘ</button>
+              <button class="btn float-right delete">ｘ</button>
             </li>
             {{/each}}
           </ul>
       </div>
-      <div class="col-4" style="padding-top:1%;">
+      <div class="col-6" style="padding-top:1%;">
         <button class="btn float-right"><a href="/" style="float:left">Home/Niche Toys</a></button>
         <br>
-        <div class="card mt-4" style="background-color:#d8e7e1;">
+        <div class="card mt-4" style="background-color:transparent;">
           <div class="card-body">
-            <h5 class="card-title">Toy News from Users</h5>
+            <h5 class="card-title" style="text-decoration: underline overline;">Toy News from Users</h5>
             <div id="general-comments">
                 <form class="clearfix mb-4" action="POST">
                   <div class="form-group">
                   <label for="general-comment">Do you have any new toy news?</label>
                     <textarea class="form-control" id="general-comment" aria-describedby="general-comment" rows="5" placeholder="User Toy News"></textarea>
                   </div>
-                  <button id="comment-submit" class="btn float-right" style="background-color:#5ddfc9">Submit</button>
+                  <button id="comment-submit" class="btn float-right" style="background-color:#cfaa88">Submit</button>
                 </form>
-                <h5 class="previous-comments">Latest Toy News from Users</h5>
+                <h5 class="previous-comments" style="text-decoration: underline overline;">Latest Toy News from Users</h5>
                   {{> general/genpartial }}
             </div>
           </div>
@@ -62,4 +62,4 @@
 </div>
 
 <script src="/js/sharing.js"></script>
-<script src="//widget.cloudinary.com/global/all.js" type="text/javascript"></script>
+<script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript"></script>
