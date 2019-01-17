@@ -1,9 +1,9 @@
-<div class="container" style="background: rgba(220, 220, 220, 0.2); background-size: 100% auto;">
+<div class="container" style="background: rgba(220, 220, 220, 0.2); background-size: 100% auto; color: black;">
   <div class="row">
     <div class="col-6">
       <div class="card mt-4" style="background: rgba(220, 220, 220, 0.7);">
         <div class="card-body">
-          <h5 class="card-title">{{toy.text}}</h5>
+          <h3 class="card-title">{{toy.text}}</h3>
             <div id="toyPic">
               <img src={{toy.photoPath}} class="img-fluid" alt="toy">
             </div>
@@ -18,7 +18,7 @@
           <form class="clearfix mb-4">
           <div class="form-group">
           <label for="toy-comment">Add a comment about this toy.</label>
-            <textarea class="form-control" id="toy-comment" placeholder="Enter your comment"></textarea>
+            <textarea class="form-control" id="toy-comment" placeholder="Enter your comment" style="color: black"></textarea>
           </div>
             <button id="comment-submit" class="btn float-right" value={{toy.id}}>Submit</button>
           </form>

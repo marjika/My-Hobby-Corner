@@ -70,8 +70,15 @@ button {
 a {
   color: black;
 }
+
+button a:hover {
+  text-decoration: none;
+  color: #404040;
+  font-size: 17px;
+}
+
 #comment-submit {
-  background-color:rgb(110, 206, 144);
+  background-color:rgb(84, 235, 235);
 }
 
 /* .list-group-item {
@@ -136,6 +143,19 @@ h4 {
 
 ul {
   color: #fefefe;
+}
+
+.form-control ::selection {
+  color: black;
+}
+
+.form-group ::placeholder {
+  color: white;
+}
+
+ .form-group #toy-comment::placeholder {
+  color: #404040;
+  opacity: 1;
 }
 
 /* #dropdownMenuLink {
