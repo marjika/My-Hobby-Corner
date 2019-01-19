@@ -1,9 +1,22 @@
 /* html {
   padding: 0;
 } */
+/* body {
+  background-image: url(/images/bunnies.jpg); 
+  background-size: 100% auto; 
+  background-size: cover;
+} */
+
+html {
+  background: url(/images/bunnies.jpg) no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+  overflow: auto;
+}
 
 body {
   color: #fefefe;
+  background: transparent;
   font-family: 'Acme', sans-serif;
 }
 
@@ -23,16 +36,22 @@ body {
 
 table {
   margin: 10px;
+  border: 1px solid #404040;
 }
 th, td {
   padding: 5px;
-  border: 1px solid #999;
+  border: 1px solid #404040;
+  color: black;
 }
 th {
   background: #ccc;
 }
 tr:nth-child(odd) {
   background: #eee;
+}
+
+td a:hover {
+  color: #404040;
 }
 
 .modal {
