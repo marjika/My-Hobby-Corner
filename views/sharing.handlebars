@@ -2,40 +2,34 @@
 <div id="home">
   <div class="container">
     <div class="row">
-      <div class="col-6">
+      <div class="col-5">
         <h2>Talk about your toy!</h2>
         <h3>→First, click below to upload an image of your toy←</h3>
-        <button style="background-color:#5ddfc9"><a href="#" id="upload_widget_opener">Upload your toy image</a></button>
+        <button id="widget-button" style="background-color:rgb(84, 235, 235)"><a href="#" id="upload_widget_opener">Upload your toy image</a></button>
         <br>
         <br>
         <form class="clearfix mb-4" action="POST">
           <div class="form-group">
-            <label for="example-text">Name of Toy</label>
+            <label for="example-text"><h4>Name of Toy</h4></label>
             <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Toy Name">
           </div>
           <div class="form-group">
-            <label for="example-description">Description (How old is it? How did you acquire it? Etc.)</label>
+            <label for="example-description"><h4>Description (How old is it? How did you acquire it? Etc.)</h4></label>
             <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Toy Description"></textarea>
           </div>
           <br>
             <button id="submit" class="btn float-right" style="background-color:rgb(84, 235, 235)">Submit</button>
         </form>
         <h4>Recent Toy List:</h4>
-          <ul id="example-list" class="list-group">
-            {{#each data.toys}}
-            <li data-id="{{this.id}}" class="list-group-item">
-              <a href="toys/{{this.id}}">{{this.text}}</a>
-              <button class="btn float-right delete">ｘ</button>
-            </li>
-            {{/each}}
+          <ul id="example-list" class="list-group-flush" style="background: rgba(220, 220, 220, 0.6);">
           </ul>
       </div>
-      <div class="col-6" style="padding-top:1%;">
-        <button class="btn float-right"><a href="/" style="float:left">Home/Niche Toys</a></button>
+      <div class="col-7" style="padding-top:1%;">
+        <button class="btn float-right"><a href="/" style="float:left">Home/Hobby Corner</a></button>
         <br>
         <div class="card mt-4" style="background-color:transparent;">
-          <div class="card-body">
-            <h3 class="card-title" style="text-decoration: underline overline;">Toy News from Users</h3>
+          <div class="card-body" style="background: rgba(220, 220, 220, 0.6); color:black;">
+            <h2 class="card-title" style="text-decoration: underline overline;">Toy News from Users</h2>
             <div id="general-comments">
                 <form class="clearfix mb-4" action="POST">
                   <div class="form-group">
@@ -44,7 +38,7 @@
                   </div>
                   <button id="comment-submit" class="btn float-right" style="background-color:rgb(84, 235, 235)">Submit</button>
                 </form>
-                <h3 class="previous-comments" style="text-decoration: underline overline;">Latest Toy News from Users</h3>
+                <h2 class="previous-comments" style="text-decoration: underline overline;">Latest Toy News from Users</h2>
                   {{> general/genpartial }}
             </div>
           </div>

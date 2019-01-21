@@ -1,4 +1,4 @@
-//This handles all the sharing elements of Niche
+//This handles all the sharing elements of Hobby Corner
 // Get references to page elements
 var $exampleText = $("#example-text");
 var $exampleDescription = $("#example-description");
@@ -59,20 +59,21 @@ var refreshExamples = function() {
 
       var $li = $("<li>")
         .attr({
-          class: "list-group-item",
+          class: "list-group-item clearfix",
           "data-id": toy.id
         })
         .append($a);
 
       var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
+        .addClass("btn float-right delete")
+        .text("Delete");
 
       $li.append($button);
 
       return $li;
     });
 
+    $("#widget-button").show();
     $exampleList.empty();
     $exampleList.append($examples);
   });
@@ -82,24 +83,24 @@ var refreshExamples = function() {
 // Save the new example to the db and refresh the list
 var handleFormSubmit = function(event) {
   event.preventDefault();
-
   var toy = {
     text: $exampleText.val().trim(),
     description: $exampleDescription.val().trim(),
     photoPath: picPath
   };
-  //console.log(picPath);
-
   if (!(toy.text && toy.description)) {
-    alert("You must enter a toy text and description!");
-    return;
+    inputAlert();
   }
-  API.saveExample(toy).then(function() {
-    refreshExamples();
-  });
+  else {
+    //console.log(picPath);
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+    API.saveExample(toy).then(function() {
+      refreshExamples();
+    });
+
+    $exampleText.val("");
+    $exampleDescription.val("");
+  }
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked
@@ -113,6 +114,15 @@ var handleDeleteBtnClick = function() {
     refreshExamples();
   });
 };
+
+function inputAlert() {
+  var modal = $('#myModal');
+  $("#remind").text("Please enter a name and description.")
+  modal.css("display", "block");
+  setTimeout(function(){ modal.css("display", "none"); }, 2500);
+  $exampleText.val("");
+  $exampleDescription.val("");
+}
 
 function userAlert() {
   var modal = $('#myModal');
@@ -159,6 +169,7 @@ var myWidget = cloudinary.createUploadWidget({
     //picPath = result[0].url;
     if (result && result.event === "success") {
       picPath = result.info.url;
+      $("#widget-button").hide();
     }
      })
 

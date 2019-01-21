@@ -20,8 +20,21 @@ body {
   font-family: 'Acme', sans-serif;
 }
 
+/* input[type=text]:focus {
+  border: 4px #404040 solid
+}
+
+textarea[type=text]:focus {
+  border: 4px #404040 solid
+} */
+
 .list-group-item {
   line-height: 1.5;
+}
+
+ul a:hover {
+  color: gray;
+  text-decoration: none;
 }
 
 .img-fluid {
@@ -69,6 +82,7 @@ td a:hover {
 
 .modal-content {
   background-color: #fefefe;
+  color: black;
   margin: 12% auto; 
   padding: 20px;
   text-align: center;
@@ -96,6 +110,10 @@ button a:hover {
   font-size: 17px;
 }
 
+ul .btn {
+  background-color: pink;
+}
+
 #comment-submit {
   background-color:rgb(84, 235, 235);
 }
@@ -119,7 +137,7 @@ h2 {
 }
 
 h3 {
-  font-size: 140%;
+  font-size: 130%;
 }
 
 h4 {
@@ -130,7 +148,7 @@ h4 {
   background: none;
 }
 
-.col-6 {
+.col-5, .col-6, .col-7 {
   text-align: center;
 }
 
@@ -172,15 +190,16 @@ ul {
   color: white;
 }
 
- .form-group #toy-comment::placeholder {
+.form-group #toy-comment::placeholder {
   color: #404040;
   opacity: 1;
 }
 
-/* #dropdownMenuLink {
-  background: rgba(220, 220, 220, 0.4);
+.form-group #general-comment::placeholder {
+  color: #404040;
+  opacity: 1;
 }
 
-.feedgrabbr_widget {
-  border-radius: 25px;
-} */
+.form-group #example-text input[type=text]:focus {
+  background-color: pink;
+}
