@@ -3,19 +3,19 @@
   <div class="container">
     <div class="row">
       <div class="col-5">
-        <h2>Talk about your toy!</h2>
+        <h2>Talk about your toy or hobby!</h2>
         <h3>→First, click below to upload an image of your toy←</h3>
         <button id="widget-button" style="background-color:rgb(84, 235, 235)"><a href="#" id="upload_widget_opener">Upload your toy image</a></button>
         <br>
         <br>
-        <form class="clearfix mb-4" action="POST">
+        <form class="clearfix mb-4" action="POST" style="background: rgba(220, 220, 220, 0.6); color:black; padding:10px">
           <div class="form-group">
             <label for="example-text"><h4>Name of Toy</h4></label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Toy Name">
+            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Toy Name"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Toy Name'">
           </div>
           <div class="form-group">
             <label for="example-description"><h4>Description (How old is it? How did you acquire it? Etc.)</h4></label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Toy Description"></textarea>
+            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Toy Description"onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Toy Description'"></textarea>
           </div>
           <br>
             <button id="submit" class="btn float-right" style="background-color:rgb(84, 235, 235)">Submit</button>
@@ -34,7 +34,7 @@
                 <form class="clearfix mb-4" action="POST">
                   <div class="form-group">
                   <label for="general-comment">Do you have any new toy news?</label>
-                    <textarea class="form-control" id="general-comment" aria-describedby="general-comment" rows="5" placeholder="User Toy News"></textarea>
+                    <textarea class="form-control" id="general-comment" aria-describedby="general-comment" rows="5" placeholder="User Toy News" onfocus="this.placeholder = ''" onblur="this.placeholder = 'User Toy News'"></textarea>
                   </div>
                   <button id="comment-submit" class="btn float-right" style="background-color:rgb(84, 235, 235)">Submit</button>
                 </form>

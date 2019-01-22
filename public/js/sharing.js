@@ -92,7 +92,6 @@ var handleFormSubmit = function(event) {
     inputAlert();
   }
   else {
-    //console.log(picPath);
 
     API.saveExample(toy).then(function() {
       refreshExamples();
@@ -178,13 +177,3 @@ var myWidget = cloudinary.createUploadWidget({
   }, false);
 
   refreshExamples();
-
-{/* <script type="text/javascript">  
-var myWidget = cloudinary.createUploadWidget({
-  cloudName: 'my_cloud_name', 
-  uploadPreset: 'my_preset'}, (error, result) => { console.log(error, result) })
-
-document.getElementById("upload_widget").addEventListener("click", function(){
-    myWidget.open();
-  }, false);
-</script> */}

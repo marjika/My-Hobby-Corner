@@ -18,7 +18,7 @@
           <form class="clearfix mb-4">
           <div class="form-group">
           <label for="toy-comment">Add a comment about this toy.</label>
-            <textarea class="form-control" id="toy-comment" placeholder="Enter your comment" style="color: black"></textarea>
+            <textarea class="form-control" id="toy-comment" placeholder="Enter your comment"  onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your comment'" style="color: black"></textarea>
           </div>
             <button id="comment-submit" class="btn float-right" value={{toy.id}}>Submit</button>
           </form>
