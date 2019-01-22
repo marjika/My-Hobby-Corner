@@ -4,7 +4,7 @@ This project allows you to create a login then sign in and logout to see your ac
 
 ![Main Page](public/images/MainPage.JPG)
 
-###Sharing and commenting on toys and hobbies and the associated news
+### Sharing and commenting on toys and hobbies and the associated news
 
 You can also share your toy by uploading your toy image and adding the name of the toy and description into it. Once you click submit, it gives you the recent toy list and you can click on the specific toy to see the info. You can add a comment about that toy in the page. Then in the same page you can add "Toy News from you as the user" so others can see commentary about that specific toy.  On the sharing page, both the general comments and recent toys display the most recent at the top.  You may comment on a specific toy whether you're logged in or not, but you must be a logged-in user to make a general toy news comment.  If not logged in, a modal will pop up to remind the client to sign in.
 
@@ -12,12 +12,12 @@ You can also share your toy by uploading your toy image and adding the name of t
 
 ![Toy Page](public/images/ToyPage.JPG)
 
-###Search for toys and hobbies
+### Search for toys and hobbies
 
 In the search toy page, you can see all the toys, in alphabetical order, including info that has been uploaded by the users.  You can also link to the specific toy page by clicking on the toy name.  You can search for a toy on popular sites such as Amazon, ebay, etc. with a Google custom search engine.
 
 ![Search Page](public/images/SearchPage.JPG)
 
-###About this application
+### About this application
 
 This project was created and is maintained by me, Marjika Howarth.
